@@ -2,4 +2,6 @@
 collections:
 - name: community.kubevirt
 - name: community.kubernetes
+  version: 2.0.0
 - name: kubernetes.core
+  version: 2.2.1
