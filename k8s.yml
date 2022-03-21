@@ -5,5 +5,5 @@ connections:
   token: sha256~gMjNfe3rbO9KI0_-2jFEhuw9bmVyeP2JOeLkBnjrM2E
   ssl_verify: false
   kubeconfig: kubeconfig
-- namespaces:
-  - vm-demo
+#- namespaces:
+#  - vm-demo
