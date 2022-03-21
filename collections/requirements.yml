@@ -2,3 +2,4 @@
 collections:
 - name: community.kubevirt
 - name: community.kubernetes
+- name: kubernetes.core
