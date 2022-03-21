@@ -1,6 +1,6 @@
 ---
 plugin: community.kubevirt.kubevirt
 connections:
-- host: https://console-openshift-console.apps.zpa.redhat.lab
-#  token: sha256~gMjNfe3rbO9KI0_-2jFEhuw9bmVyeP2JOeLkBnjrM2E
+- host: https://api.zpa.redhat.lab:6443
+  token: sha256~gMjNfe3rbO9KI0_-2jFEhuw9bmVyeP2JOeLkBnjrM2E
   ssl_verify: false
