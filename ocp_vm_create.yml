@@ -9,5 +9,5 @@
       name: 05-zpa-cockpit
       namespace: vm-demo
       validate_certs: no
-      username: admin
-      password: Start123
+#      username: admin
+#      password: Start123
