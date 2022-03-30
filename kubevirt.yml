@@ -1,5 +1,0 @@
----
-plugin: kubevirt
-connections:
-  - kubeconfig: kubeconfig
-    validate_certs: false
