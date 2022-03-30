@@ -6,7 +6,7 @@
   tasks:
   - name: VM create with Kubevirt module
     community.kubevirt.kubevirt_vm:
-      state: running
+      state: stopped
       name: 05-zpa-cockpit
       namespace: vm-demo
       validate_certs: no
