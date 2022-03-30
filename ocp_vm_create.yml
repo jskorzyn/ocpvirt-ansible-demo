@@ -1,6 +1,7 @@
 ---
 - name: VM create on OCP Virt
   hosts: localhost
+  gather_facts: no
 
   tasks:
   - name: VM create with Kubevirt module
@@ -9,5 +10,5 @@
       name: 05-zpa-cockpit
       namespace: vm-demo
       validate_certs: no
-#      username: admin
-#      password: Start123
+      username: admin
+      password: Start123
