@@ -1,6 +1,6 @@
 ---
 - name: VM create on OCP Virt
-  hosts: all
+  hosts: localhost
 
   tasks:
   - name: VM create with Kubevirt module
