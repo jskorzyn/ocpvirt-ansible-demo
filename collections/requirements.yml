@@ -1,10 +1,10 @@
 ---
 collections:
-#- name: community.kubevirt
-- name: https://github.com/jskorzyn/community.kubevirt.git
-  type: git
-  version: main
-#- name: community.kubernetes
-#  version: 1.2.1
-- name: kubernetes.core
-#  version: 2.2.1
+- name: community.kubevirt
+# - name: https://github.com/jskorzyn/community.kubevirt.git
+#   type: git
+#   version: main
+# #- name: community.kubernetes
+# #  version: 1.2.1
+# - name: kubernetes.core
+# #  version: 2.2.1
