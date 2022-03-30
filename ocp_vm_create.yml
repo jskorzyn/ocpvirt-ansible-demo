@@ -10,5 +10,8 @@
       name: 05-zpa-cockpit
       namespace: vm-demo
       validate_certs: no
+      host: https://api.zpa.redhat.lab:6443
+      username: zibi
+      api_key: sha256~AoKr5mV48go0PpoQF9PtrFuSwF6mMoielCJfABTENZY
 #      username: admin
-#     password: Start123
+#      password: Start123
