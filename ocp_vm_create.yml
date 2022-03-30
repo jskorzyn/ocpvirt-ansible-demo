@@ -9,11 +9,11 @@
       state: running
       name: rhel8-jsk-001
       namespace: vm-demo
-      template: rhel8-server-small
-      interfaces:
-      - bridge: {}
-        model: virtio
-        name: default
+      template: jsk-test
+      # interfaces:
+      # - bridge: {}
+      #   model: virtio
+      #   name: default
       validate_certs: no
       host: https://api.zpa.redhat.lab:6443
       username: zibi
