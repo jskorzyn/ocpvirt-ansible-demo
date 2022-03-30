@@ -6,17 +6,11 @@
   tasks:
   - name: VM create with Kubevirt module
     community.kubevirt.kubevirt_vm:
+      name: jskrhel8
       state: running
-      name: rhel8-jsk-001
       namespace: vm-demo
       template: jsk-test
-      # interfaces:
-      # - bridge: {}
-      #   model: virtio
-      #   name: default
       validate_certs: no
       host: https://api.zpa.redhat.lab:6443
       username: zibi
       api_key: sha256~AoKr5mV48go0PpoQF9PtrFuSwF6mMoielCJfABTENZY
-#      username: admin
-#      password: Start123
