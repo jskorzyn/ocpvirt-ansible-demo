@@ -10,7 +10,7 @@
       name: jskrhel8
       state: running
       namespace: vm-demo
-      template: myvmtemplate
+      template: jsk-test
       template_parameters:
         volumes: rootdisk
         networks: bridge
