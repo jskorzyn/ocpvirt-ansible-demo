@@ -1,3 +1,4 @@
+
 ---
 - name: VM create on OCP Virt
   hosts: localhost
@@ -9,7 +10,12 @@
       name: jskrhel8
       state: running
       namespace: vm-demo
-      template: jsk-test
+      template: myvmtemplate
+      template_parameters:
+        volumes: rootdisk
+        networks: bridge
+        interfaces: default
+        disks: rootdisk
       validate_certs: no
       host: https://api.zpa.redhat.lab:6443
       username: zibi
