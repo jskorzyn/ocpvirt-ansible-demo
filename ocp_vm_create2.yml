@@ -12,6 +12,7 @@
       namespace: vm-demo
       template: jsk-test
       template_parameters:
+        name: test
         volumes: rootdisk
         networks: bridge
         interfaces: default
