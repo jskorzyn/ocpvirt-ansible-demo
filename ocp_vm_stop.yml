@@ -8,7 +8,7 @@
   tasks:
   - name: Stop VM with Kubevirt module
     community.kubevirt.kubevirt_vm:
-      name: "{{ vm_name }}"
+      name: "{{ ocp_vm_name_to_stop }}"
       state: stopped
       namespace: vm-demo
       validate_certs: no
