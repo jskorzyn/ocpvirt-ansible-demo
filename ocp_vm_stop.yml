@@ -1,0 +1,17 @@
+---
+- name: Stop VM
+  hosts: localhost
+  gather_facts: no
+
+  vars_file: files/ocp_virt_creds.yml
+
+  tasks:
+  - name: Stop VM with Kubevirt module
+    community.kubevirt.kubevirt_vm:
+      name: "{{ vm_name }}"
+      state: stopped
+      namespace: vm-demo
+      validate_certs: no
+      host: "{{ ocp_host_url }}"
+      username: "{{ ocp_username }}"
+      api_key: "{{ ocp_api_key }}"

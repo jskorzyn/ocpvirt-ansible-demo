@@ -1,0 +1,17 @@
+---
+- name: OCP Virt Cleanup job creation 
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+
+  tasks:
+  job_template:
+    name: "{{ ansible_date_time.iso8601_basic_short }}-{{ ocp_service_name }}"
+    job_type: "run"
+    organization: "demo"
+    inventory: "localhost"
+    project: "ocpvirt-ansible-demo"
+    playbook: "cleanup_task.yml"
+    credentials:
+      - "controller"
+    state: "present"
