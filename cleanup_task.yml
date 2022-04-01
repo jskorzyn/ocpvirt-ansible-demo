@@ -10,7 +10,7 @@
       name: "{{ ansible_date_time.iso8601_basic_short }}-{{ ocp_vm_name_to_stop }}"
       state: present
       unified_job_template: "OCP VM Stop"
-      rrule: "DTSTART:20220401T154000Z RRULE:FREQ=DAILY;INTERVAL=0"
+      rrule: "DTSTART:20220401T154000Z RRULE:FREQ=DAILY;INTERVAL=1;COUNT=1"
 #      rrule: "{{ query('ansible.controller.schedule_rrule', 'none', start_date='2022-04-01 15:00:00') }}"
       extra_data: { ocp_vm_name: "ocp_vm_name_to_stop" }
     register: result
