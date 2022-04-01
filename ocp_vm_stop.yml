@@ -3,7 +3,7 @@
   hosts: localhost
   gather_facts: no
 
-  vars_file: files/ocp_virt_creds.yml
+  vars_files: files/ocp_virt_creds.yml
 
   tasks:
   - name: Stop VM with Kubevirt module
