@@ -5,22 +5,12 @@
   gather_facts: yes
 
   tasks:
-  # job_template:
-  #   name: "{{ ansible_date_time.iso8601_basic_short }}-{{ ocp_service_name }}"
-  #   job_type: "run"
-  #   organization: "demo"
-  #   inventory: "localhost"
-  #   project: "ocpvirt-ansible-demo"
-  #   playbook: "cleanup_task.yml"
-  #   credentials:
-  #     - "controller"
-  #   state: "present"
-    ansible.controller.schedule:
-      name: "{{ ansible_date_time.iso8601_basic_short }}-{{ ocp_vm_name_to_stop }}"
-      state: present
-      unified_job_template: "OCP VM Stop"
-      rrule: "{{ query('ansible.controller.schedule_rrule', 'none', start_date='2022-04-01 15:00:00') }}"
-      extra_data: 
-        - ocp_vm_name: "{{ ocp_vm_name_to_stop }}"
-    register: result
+  ansible.controller.schedule:
+    name: "{{ ansible_date_time.iso8601_basic_short }}-{{ ocp_vm_name_to_stop }}"
+    state: present
+    unified_job_template: "OCP VM Stop"
+    rrule: "{{ query('ansible.controller.schedule_rrule', 'none', start_date='2022-04-01 15:00:00') }}"
+    extra_data: 
+      - ocp_vm_name: "{{ ocp_vm_name_to_stop }}"
+  register: result
 
