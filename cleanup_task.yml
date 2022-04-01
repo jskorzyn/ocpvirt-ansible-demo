@@ -15,12 +15,12 @@
   #   credentials:
   #     - "controller"
   #   state: "present"
-    schedule:
-      name: "{{ ansible_date_time.iso8601_basic_short }}-{{ ocp_service_name }}"
+    ansible.controller.schedule:
+      name: "{{ ansible_date_time.iso8601_basic_short }}-{{ ocp_vm_name_to_stop }}"
       state: present
       unified_job_template: "OCP VM Stop"
-      rrule: "{{ query('awx.awx.schedule_rrule', 'none', start_date='2019-12-19 13:05:51') }}"
+      rrule: "{{ query('ansible.controller.schedule_rrule', 'none', start_date='2022-04-01 15:00:00') }}"
       extra_data: 
-        - ocp_vm_name_to_stop: "{{ ocp_vm_name }}"
+        - ocp_vm_name: "{{ ocp_vm_name_to_stop }}"
     register: result
 
