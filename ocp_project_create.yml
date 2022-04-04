@@ -1,0 +1,18 @@
+---
+- name: OCP Project Create
+  hosts: localhost
+  gather_facts: no
+
+  vars_files: files/ocp_virt_creds.yml
+
+  tasks:
+  - name: Create project for VM
+    redhat.openshift.k8s:
+      name: "{{ ocp_project_name }}"
+      api_version: v1
+      kind: Project
+      state: present
+      validate_certs: no
+      host: "{{ ocp_host_url }}"
+      username: "{{ ocp_username }}"
+      api_key: "{{ ocp_api_key }}"
